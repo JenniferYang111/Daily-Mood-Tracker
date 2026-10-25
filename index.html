@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A gentle space to check in with your mood and reflect on your day.">
+  <title>Daily Mood Tracker</title>
+</head>
+<body>
+  <!-- Page introduction; teammates can add visual styling later. -->
+  <header>
+    <h1>Daily Mood Tracker</h1>
+    <p>Welcome! Take a quiet moment to check in with yourself. Every feeling is welcome here.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="check-in-heading">
+      <h2 id="check-in-heading">How are you feeling today?</h2>
+      <p>Choose the mood that feels closest to yours, and add a note if you like.</p>
+
+      <!-- Shared radio names allow one mood choice. Add saving behavior with JavaScript later. -->
+      <form id="mood-form">
+        <fieldset>
+          <legend>Choose your mood</legend>
+          <p>
+            <input type="radio" id="mood-happy" name="mood" value="happy" required>
+            <label for="mood-happy">Happy</label>
+          </p>
+          <p>
+            <input type="radio" id="mood-calm" name="mood" value="calm" required>
+            <label for="mood-calm">Calm</label>
+          </p>
+          <p>
+            <input type="radio" id="mood-sad" name="mood" value="sad" required>
+            <label for="mood-sad">Sad</label>
+          </p>
+          <p>
+            <input type="radio" id="mood-stressed" name="mood" value="stressed" required>
+            <label for="mood-stressed">Stressed</label>
+          </p>
+          <p>
+            <input type="radio" id="mood-tired" name="mood" value="tired" required>
+            <label for="mood-tired">Tired</label>
+          </p>
+        </fieldset>
+
+        <!-- The note is optional and limited to a short daily reflection. -->
+        <p>
+          <label for="daily-note">A note about your day (optional)</label>
+          <textarea id="daily-note" name="note" rows="5" maxlength="500" aria-describedby="note-help"></textarea>
+        </p>
+        <p id="note-help">Write up to 500 characters about anything on your mind.</p>
+
+        <!-- A plain button avoids submitting personal notes before saving is implemented. -->
+        <button type="button" id="save-mood">Save My Mood</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="history-heading">
+      <h2 id="history-heading">Previous mood entries</h2>
+      <!-- Replace the empty message and populate this list when saved entries are available. -->
+      <p id="empty-history">No entries yet. Your daily reflections will appear here.</p>
+      <ul id="mood-entries" aria-label="Saved mood entries"></ul>
+      <!-- Each future list item can contain an article with a dated heading, mood, and note. -->
+    </section>
+  </main>
+</body>
+</html>
