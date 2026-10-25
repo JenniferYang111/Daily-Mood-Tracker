@@ -10,12 +10,12 @@
   <!-- Page introduction; teammates can add visual styling later. -->
   <header>
     <h1>Daily Mood Tracker</h1>
-    <p>Welcome! Take a quiet moment to check in with yourself. Every feeling is welcome here.</p>
+    <p>Welcome to your daily pause. 🤍</p>
   </header>
 
   <main>
     <section aria-labelledby="check-in-heading">
-      <h2 id="check-in-heading">How are you feeling today?</h2>
+      <h2 id="check-in-heading">How have you been feeling lately?</h2>
       <p>Choose the mood that feels closest to yours, and add a note if you like.</p>
 
       <!-- Shared radio names allow one mood choice. Add saving behavior with JavaScript later. -->
@@ -24,32 +24,32 @@
           <legend>Choose your mood</legend>
           <p>
             <input type="radio" id="mood-happy" name="mood" value="happy" required>
-            <label for="mood-happy">Happy</label>
+            <label for="mood-happy">😊 Happy</label>
           </p>
           <p>
             <input type="radio" id="mood-calm" name="mood" value="calm" required>
-            <label for="mood-calm">Calm</label>
+            <label for="mood-calm">😌 Calm</label>
           </p>
           <p>
-            <input type="radio" id="mood-sad" name="mood" value="sad" required>
-            <label for="mood-sad">Sad</label>
+            <input type="radio" id="mood-okay" name="mood" value="okay" required>
+            <label for="mood-okay">😐 Okay</label>
           </p>
           <p>
-            <input type="radio" id="mood-stressed" name="mood" value="stressed" required>
-            <label for="mood-stressed">Stressed</label>
+            <input type="radio" id="mood-low" name="mood" value="low" required>
+            <label for="mood-low">😔 Low</label>
           </p>
           <p>
-            <input type="radio" id="mood-tired" name="mood" value="tired" required>
-            <label for="mood-tired">Tired</label>
+            <input type="radio" id="mood-overwhelmed" name="mood" value="overwhelmed" required>
+            <label for="mood-overwhelmed">😵‍💫 Overwhelmed</label>
           </p>
         </fieldset>
 
         <!-- The note is optional and limited to a short daily reflection. -->
         <p>
-          <label for="daily-note">A note about your day (optional)</label>
+          <label for="daily-note">A little space for your thoughts. ☁️</label>
           <textarea id="daily-note" name="note" rows="5" maxlength="500" aria-describedby="note-help"></textarea>
         </p>
-        <p id="note-help">Write up to 500 characters about anything on your mind.</p>
+        <p id="note-help">Share as much or as little as you like, up to 500 characters. This is optional.</p>
 
         <!-- A plain button avoids submitting personal notes before saving is implemented. -->
         <button type="button" id="save-mood">Save My Mood</button>
