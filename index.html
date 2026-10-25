@@ -5,12 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A gentle space to check in with your mood and reflect on your day.">
   <title>Daily Mood Tracker</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Page introduction; teammates can add visual styling later. -->
+  <!-- Full-width welcome and decorative garden illustration. -->
   <header>
+    <div class="welcome">
+    <span class="eyebrow">A SMALL MOMENT, JUST FOR YOU</span>
     <h1>Daily Mood Tracker</h1>
     <p>Welcome to your daily pause. 🤍</p>
+    <span class="welcome-note">A soft place to land, whatever kind of day you’re having.</span>
+    </div>
+    <svg class="garden" viewBox="0 0 600 300" fill="none" aria-hidden="true" focusable="false">
+      <!-- Simple vector artwork stays crisp at every screen size. -->
+      <circle cx="470" cy="75" r="43" fill="#f6d991"/>
+      <g fill="#fffaf0"><path d="M60 83c-15-23 15-43 32-25 4-35 55-35 60 0 32-8 45 31 14 36H66z"/><path d="M367 43c-9-18 14-29 23-17 5-24 39-23 43 0 23-5 32 23 9 25h-65z"/></g>
+      <path d="M0 252Q120 157 285 235T600 203V300H0z" fill="#d5dfb9"/>
+      <path d="M0 282Q160 218 324 268T600 240V300H0z" fill="#b9cba2"/>
+      <g stroke="#786052" stroke-width="3" stroke-linecap="round">
+        <ellipse cx="238" cy="246" rx="60" ry="47" fill="#dfb88f" stroke="none"/>
+        <circle cx="195" cy="143" r="23" fill="#dfb88f" stroke="none"/><circle cx="279" cy="143" r="23" fill="#dfb88f" stroke="none"/>
+        <circle cx="195" cy="143" r="12" fill="#edc9b2" stroke="none"/><circle cx="279" cy="143" r="12" fill="#edc9b2" stroke="none"/>
+        <ellipse cx="237" cy="184" rx="64" ry="55" fill="#e8c7a2" stroke="none"/>
+        <path d="M210 179q6-8 12 0m29 0q6-8 12 0"/>
+        <ellipse cx="237" cy="195" rx="19" ry="15" fill="#fae9d2" stroke="none"/>
+        <path d="m233 191 4 3 4-3m-4 3v5m-7 0q7 8 14 0"/>
+        <ellipse cx="196" cy="195" rx="11" ry="6" fill="#e9aa96" stroke="none"/><ellipse cx="277" cy="195" rx="11" ry="6" fill="#e9aa96" stroke="none"/>
+        <path d="M206 244q28 19 57 0"/>
+        <ellipse cx="379" cy="245" rx="49" ry="43" fill="#fff2dc" stroke="none"/>
+        <ellipse cx="358" cy="137" rx="17" ry="44" transform="rotate(-12 358 137)" fill="#fff2dc" stroke="none"/>
+        <ellipse cx="399" cy="137" rx="17" ry="44" transform="rotate(12 399 137)" fill="#fff2dc" stroke="none"/>
+        <ellipse cx="358" cy="133" rx="7" ry="28" transform="rotate(-12 358 133)" fill="#efc6b7" stroke="none"/>
+        <ellipse cx="399" cy="133" rx="7" ry="28" transform="rotate(12 399 133)" fill="#efc6b7" stroke="none"/>
+        <ellipse cx="379" cy="190" rx="49" ry="42" fill="#fff2dc" stroke="none"/>
+        <path d="M357 185q5-7 10 0m24 0q5-7 10 0m-26 12 4 3 4-3m-10 8q6 6 12 0"/>
+        <ellipse cx="348" cy="199" rx="9" ry="5" fill="#efc6b7" stroke="none"/><ellipse cx="410" cy="199" rx="9" ry="5" fill="#efc6b7" stroke="none"/>
+        <path d="M350 244q27 17 54 0M100 259v-42m0 25q-21 0-20-17 19-1 20 17m0-5q20 0 19-17-18-1-19 17M505 263v-44m0 25q-20 0-19-17 18-1 19 17" stroke="#7e996b"/>
+      </g>
+      <g fill="#fff4df"><circle cx="100" cy="211" r="13"/><circle cx="505" cy="214" r="12"/></g>
+      <g fill="#e7b46f"><circle cx="100" cy="211" r="5"/><circle cx="505" cy="214" r="5"/></g>
+      <path d="M305 121c-19-16-29 10 0 25 29-15 19-41 0-25" fill="#d99f8f"/>
+    </svg>
   </header>
 
   <main>
@@ -45,7 +80,7 @@
         </fieldset>
 
         <!-- The note is optional and limited to a short daily reflection. -->
-        <p>
+        <p class="journal">
           <label for="daily-note">A little space for your thoughts. ☁️</label>
           <textarea id="daily-note" name="note" rows="5" maxlength="500" aria-describedby="note-help"></textarea>
         </p>
@@ -57,6 +92,7 @@
     </section>
 
     <section aria-labelledby="history-heading">
+      <span class="eyebrow">YOUR LITTLE COLLECTION OF DAYS</span>
       <h2 id="history-heading">Previous mood entries</h2>
       <!-- Replace the empty message and populate this list when saved entries are available. -->
       <p id="empty-history">No entries yet. Your daily reflections will appear here.</p>
@@ -64,5 +100,6 @@
       <!-- Each future list item can contain an article with a dated heading, mood, and note. -->
     </section>
   </main>
+  <footer>One day at a time. One feeling at a time. <span aria-hidden="true">🌼</span></footer>
 </body>
 </html>
