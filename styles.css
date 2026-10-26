@@ -108,3 +108,26 @@ footer { padding: 10px 24px 24px; text-align: center; color: var(--muted); font-
 }
 @media (max-width: 440px) { fieldset { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Journal actions stay together; Start Over never touches saved entries. */
+.journal-actions { grid-column: 2; grid-row: 3; display: grid; justify-items: end; gap: 10px; }
+.journal-actions button { grid-column: auto; grid-row: auto; min-width: 190px; }
+#start-over { color: var(--sage); background: #fffaf0; border-color: #acb9a1; box-shadow: none; }
+#start-over:hover { background: #eaf0e1; }
+button:disabled { cursor: wait; }
+#save-status { margin: 0; min-height: 1.6em; max-width: 420px; font-size: .8rem; color: var(--sage); }
+.storage-note { font-size: .78rem; margin: 4px 0 16px; }
+#mood-entries, #mood-entries:empty { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 18px; padding: 0; margin: 15px 0 0; list-style: none; min-height: 1px; }
+#mood-entries li { min-width: 0; border: 1px solid #ddd5c4; border-radius: 15px; padding: 20px; background: linear-gradient(135deg, #fffdf5, #f4efdf); }
+#mood-entries li:nth-child(even) { background: linear-gradient(135deg, #f7faf0, #e9eedf); }
+#mood-entries h3 { display: flex; align-items: center; gap: 12px; font-size: 1rem; margin: 0 0 10px; font-weight: 400; }
+#mood-entries time { color: var(--muted); font-size: .75rem; }
+.entry-note { font: 22px/1.5 "Kalam", "Segoe Print", cursive; white-space: pre-wrap; overflow-wrap: anywhere; margin: 12px 0 0; }
+.flying-paper { position: fixed; z-index: 100; pointer-events: none; overflow: hidden; padding: 15px 19px; color: #514d46; font: 22px/32px "Kalam", cursive; white-space: pre-wrap; overflow-wrap: anywhere; border: 1px solid #dccfc1; border-radius: 16px; background: repeating-linear-gradient(transparent 0 31px, #d7cbb73b 31px 32px), #fffcf4; box-shadow: 0 10px 25px #5a4b382b; transform-origin: center; }
+.entry-arrived { animation: paper-arrival .45s ease-out; }
+@keyframes paper-arrival { from { opacity: .3; transform: translateY(12px) rotate(-2deg); } to { opacity: 1; transform: none; } }
+@media (max-width: 760px) {
+  .journal-actions { grid-column: 1; grid-row: auto; justify-items: stretch; }
+  .journal-actions button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .entry-arrived { animation: none; } }

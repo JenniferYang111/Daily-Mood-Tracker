@@ -6,7 +6,8 @@
   <meta name="description" content="A gentle space to check in with your mood and reflect on your day.">
   <title>Daily Mood Tracker</title>
   <link rel="preload" href="assets/fonts/Kalam-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=handwritten-animals">
+  <link rel="stylesheet" href="styles.css?v=paper-cycle">
+  <script src="app.js?v=paper-cycle" defer></script>
 </head>
 <body>
   <!-- Full-width welcome and decorative garden illustration. -->
@@ -54,7 +55,7 @@
       <h2 id="check-in-heading">How have you been feeling lately?</h2>
       <p>Choose the mood that feels closest to yours, and add a note if you like.</p>
 
-      <!-- Shared radio names allow one mood choice. Add saving behavior with JavaScript later. -->
+      <!-- Shared radio names allow one mood choice. app.js saves entries on this device. -->
       <form id="mood-form">
         <fieldset>
           <legend>Choose your mood</legend>
@@ -64,11 +65,11 @@
           </p>
           <p>
             <input type="radio" id="mood-calm" name="mood" value="calm" required>
-            <label for="mood-calm"><span class="mood-icon" aria-hidden="true">😌</span> <span>Calm</span></label>
+            <label for="mood-calm"><img class="mood-icon" src="assets/icons/calm-bunny.svg" alt="" width="52" height="52"> <span>Calm</span></label>
           </p>
           <p>
             <input type="radio" id="mood-okay" name="mood" value="okay" required>
-            <label for="mood-okay"><span class="mood-icon" aria-hidden="true">😐</span> <span>Okay</span></label>
+            <label for="mood-okay"><img class="mood-icon" src="assets/icons/okay-bear.svg" alt="" width="52" height="52"> <span>Okay</span></label>
           </p>
           <p>
             <input type="radio" id="mood-low" name="mood" value="low" required>
@@ -87,18 +88,20 @@
         </p>
         <p id="note-help">Share as much or as little as you like, up to 500 characters. This is optional.</p>
 
-        <!-- A plain button avoids submitting personal notes before saving is implemented. -->
-        <button type="button" id="save-mood">Save My Mood</button>
+        <div class="journal-actions">
+          <button type="submit" id="save-mood">Save My Mood</button>
+          <button type="reset" id="start-over">Start Over</button>
+          <p id="save-status" role="status" aria-live="polite"></p>
+        </div>
       </form>
     </section>
 
     <section aria-labelledby="history-heading">
       <span class="eyebrow">YOUR LITTLE COLLECTION OF DAYS</span>
       <h2 id="history-heading">Previous mood entries</h2>
-      <!-- Replace the empty message and populate this list when saved entries are available. -->
+      <p class="storage-note">Your entries stay in this browser, on this device.</p>
       <p id="empty-history">No entries yet. Your daily reflections will appear here.</p>
       <ul id="mood-entries" aria-label="Saved mood entries"></ul>
-      <!-- Each future list item can contain an article with a dated heading, mood, and note. -->
     </section>
   </main>
   <footer>One day at a time. One feeling at a time. <span aria-hidden="true">🌼</span></footer>
