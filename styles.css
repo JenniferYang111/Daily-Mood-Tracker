@@ -1,4 +1,12 @@
 /* Warm paper, soft garden colors, and readable system fonts. */
+/* Bundled handwriting font works without a third-party font service. */
+@font-face {
+  font-family: "Kalam";
+  src: url("assets/fonts/Kalam-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   color-scheme: light;
   --ink: #514b43;
@@ -55,7 +63,9 @@ fieldset p { position: relative; margin: 0; }
 fieldset p:last-child { grid-column: 1 / -1; }
 /* Keep native radios accessible and make the entire label clickable. */
 input[type="radio"] { position: absolute; top: 50%; left: 15px; transform: translateY(-50%); margin: 0; accent-color: var(--sage); width: 17px; height: 17px; }
-fieldset label { display: flex; align-items: center; padding: 14px 14px 14px 43px; min-height: 57px; border: 1px solid #d9d6c8; border-radius: 13px; cursor: pointer; background: #fffaf0b3; transition: background .18s, border-color .18s; }
+fieldset label { display: flex; align-items: center; gap: 10px; padding: 12px 14px 12px 43px; min-height: 80px; border: 1px solid #d9d6c8; border-radius: 13px; cursor: pointer; background: #fffaf0b3; transition: background .18s, border-color .18s; }
+/* Equal icon sizes keep every mood equally welcoming. Labels remain screen-reader friendly. */
+.mood-icon { display: inline-flex; flex: 0 0 52px; align-items: center; justify-content: center; width: 52px; height: 52px; font-size: 40px; line-height: 1; object-fit: contain; }
 fieldset p:nth-of-type(2) label { background: #edf2e8; }
 fieldset p:nth-of-type(3) label { background: #f6efdf; }
 fieldset p:nth-of-type(4) label { background: #f0edf4; }
@@ -67,9 +77,11 @@ input:focus-visible + label { outline: 3px solid #9b744e; outline-offset: 3px; }
 .journal > label { display: block; font-size: 1.4rem; margin-bottom: 13px; }
 textarea {
   display: block; width: 100%; min-height: 164px; padding: 15px 19px;
-  resize: vertical; color: var(--ink); font: inherit; line-height: 29px;
+  resize: vertical; color: #514d46;
+  font-family: "Kalam", "Segoe Print", "Bradley Hand", cursive;
+  font-size: 22px; font-weight: 400; line-height: 32px;
   border: 1px solid #dccfc1; border-radius: 16px;
-  background: repeating-linear-gradient(transparent 0 28px, #d7cbb73b 28px 29px), #fffcf4;
+  background: repeating-linear-gradient(transparent 0 31px, #d7cbb73b 31px 32px), #fffcf4;
   background-origin: content-box; box-shadow: 0 4px 16px #806a4710;
 }
 textarea:focus-visible, button:focus-visible { outline: 3px solid #9b744e; outline-offset: 4px; }
@@ -94,5 +106,5 @@ footer { padding: 10px 24px 24px; text-align: center; color: var(--muted); font-
   button { justify-self: stretch; }
   section[aria-labelledby="history-heading"] { padding: 22px; margin-top: 30px; }
 }
-@media (max-width: 360px) { fieldset { grid-template-columns: 1fr; } }
+@media (max-width: 440px) { fieldset { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }

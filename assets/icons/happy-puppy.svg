@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- A smiling puppy, drawn to match the warm garden palette. -->
+  <path d="M22 15C7 8 1 25 6 47c2 10 11 9 17-1m35-31c15-7 21 10 16 32-2 10-11 9-17-1" fill="#b78458"/>
+  <path d="M40 12C18 12 11 27 13 47c2 18 12 26 27 26s25-8 27-26C69 27 62 12 40 12" fill="#e8c49a" stroke="#9b7152" stroke-width="2"/>
+  <path d="M34 14c-7 13-6 24 6 30 12-6 13-17 6-30" fill="#fff1d8"/>
+  <path d="M22 37q5-9 10 0m16 0q5-9 10 0" stroke="#665044" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="40" cy="51" rx="18" ry="14" fill="#fff1d8"/>
+  <path d="M34 46q6-4 12 0-1 7-6 7t-6-7" fill="#665044"/>
+  <path d="M29 56q11 17 22 0" fill="#785347" stroke="#665044" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M35 62q5-4 10 0v4c0 7-10 7-10 0z" fill="#df9d9a"/>
+  <ellipse cx="21" cy="49" rx="7" ry="4" fill="#e4a995"/><ellipse cx="59" cy="49" rx="7" ry="4" fill="#e4a995"/>
+</svg>

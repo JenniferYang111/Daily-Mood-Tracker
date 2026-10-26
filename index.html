@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A gentle space to check in with your mood and reflect on your day.">
   <title>Daily Mood Tracker</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="assets/fonts/Kalam-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=handwritten-animals">
 </head>
 <body>
   <!-- Full-width welcome and decorative garden illustration. -->
@@ -59,23 +60,23 @@
           <legend>Choose your mood</legend>
           <p>
             <input type="radio" id="mood-happy" name="mood" value="happy" required>
-            <label for="mood-happy">😊 Happy</label>
+            <label for="mood-happy"><img class="mood-icon" src="assets/icons/happy-puppy.svg" alt="" width="52" height="52"> <span>Happy</span></label>
           </p>
           <p>
             <input type="radio" id="mood-calm" name="mood" value="calm" required>
-            <label for="mood-calm">😌 Calm</label>
+            <label for="mood-calm"><span class="mood-icon" aria-hidden="true">😌</span> <span>Calm</span></label>
           </p>
           <p>
             <input type="radio" id="mood-okay" name="mood" value="okay" required>
-            <label for="mood-okay">😐 Okay</label>
+            <label for="mood-okay"><span class="mood-icon" aria-hidden="true">😐</span> <span>Okay</span></label>
           </p>
           <p>
             <input type="radio" id="mood-low" name="mood" value="low" required>
-            <label for="mood-low">😔 Low</label>
+            <label for="mood-low"><img class="mood-icon" src="assets/icons/crying-kitten.svg" alt="" width="52" height="52"> <span>Low</span></label>
           </p>
           <p>
             <input type="radio" id="mood-overwhelmed" name="mood" value="overwhelmed" required>
-            <label for="mood-overwhelmed">😵‍💫 Overwhelmed</label>
+            <label for="mood-overwhelmed"><img class="mood-icon" src="assets/icons/overwhelmed.svg" alt="" width="52" height="52"> <span>Overwhelmed</span></label>
           </p>
         </fieldset>
 

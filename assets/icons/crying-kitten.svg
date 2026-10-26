@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- A tender, teary kitten for the existing Low mood. -->
+  <path d="M13 33 11 7q1-4 5-1l17 13h14L64 6q4-3 5 1l-2 26c13 29-4 41-27 41S0 62 13 33" fill="#d5cbdc" stroke="#92839d" stroke-width="2"/>
+  <path d="m17 14 2 17 10-10zm46 0-2 17-10-10z" fill="#e7b6bc"/>
+  <path d="m33 21 7 10 7-10" stroke="#b4a3bf" stroke-width="3" stroke-linecap="round"/>
+  <path d="m24 36 8-3m16 0 8 3M23 43q4 4 8 0m18 0q4 4 8 0" stroke="#6e5d77" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M26 45c-2 5-6 10-5 14 1 7 11 7 11 0 0-4-4-9-6-14m28 0c-2 5-6 10-5 14 1 7 11 7 11 0 0-4-4-9-6-14" fill="#94c7dc"/>
+  <path d="m36 49 4 4 4-4" fill="#b8808e" stroke="#b8808e" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M34 61q6-7 12 0M17 51l-10-2m10 8L7 59m56-8 10-2m-10 8 10 2" stroke="#6e5d77" stroke-width="2" stroke-linecap="round"/>
+</svg>
